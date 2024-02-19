@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MEGA_ENCRYPTION_MOBIL"
+             x:Class="MEGA_ENCRYPTION_MOBILE.MainPage">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0,1">
+                <GradientStop Color="LightCyan" Offset="0.1"/>
+                <GradientStop Color="DodgerBlue" Offset="1.0"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+
+
+        <ScrollView>
+            <VerticalStackLayout
+            Spacing="25"
+            Padding="15,15,15,15"
+            VerticalOptions="Start">
+
+                <Image
+                Source="logoname.png"
+                SemanticProperties.Description="MEGA ENCRYPTION LOGO NAME"
+                HorizontalOptions="Center"
+                Margin="0,0,0,0"/>
+
+                <Image
+                Source="logo.png"
+                SemanticProperties.Description="MEGA ENCRYPTION LOGO"
+                HeightRequest="200"
+                HorizontalOptions="Center"
+                Margin="0,0,0,0"/>
+
+
+                <Label
+                x:Name="lblInfo"
+                Text=""
+                TextColor="Red"
+                FontFamily="Arial"
+                FontAttributes="Bold"
+                FontSize="18"
+                HorizontalOptions="Center"/>
+
+
+                <Frame Padding="{OnPlatform Android='10,0', iOS='10,10'}">
+                    <Entry
+                    x:Name="txtPsw"
+                    FontAttributes="Bold"
+                    FontSize="18"
+                    Placeholder="Type password"
+                    PlaceholderColor="Gray"
+                    IsPassword="True"
+                    TextColor="{AppThemeBinding Dark= Black}"
+                    />
+                </Frame>
+
+                <ProgressBar x:Name="progressBar" IsVisible="False" />
+
+                <Button
+                x:Name="btnUpload"
+                Clicked="btnUpload_Clicked"
+                Text="Upload"
+                FontAttributes="Bold"
+                FontSize="20"
+                CornerRadius="30"
+                TextColor="White"
+                BackgroundColor="DodgerBlue"/>
+
+
+                <HorizontalStackLayout Spacing="20" HorizontalOptions="Center">
+                    <Button
+                x:Name="btnEnc"
+                Clicked="btnEnc_Clicked"
+                Text="ENCRYPT"
+                FontAttributes="Bold"
+                FontSize="20"
+                CornerRadius="30"
+                WidthRequest="150"
+                HeightRequest="60"
+                TextColor="White"
+                BackgroundColor="#046BA5"/>
+                    <Button
+                x:Name="btnDec"
+                Clicked="btnDec_Clicked"
+                Text="DECRYPT"
+                FontAttributes="Bold"
+                FontSize="20"
+                CornerRadius="30"
+                WidthRequest="150"
+                HeightRequest="60"
+                TextColor="White"
+                BackgroundColor="#046BA5"/>
+                </HorizontalStackLayout>
+
+
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+
+</ContentPage>
